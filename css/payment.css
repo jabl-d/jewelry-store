@@ -1,0 +1,207 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;/* */
+    background: #f5f0e1;
+    color: #333;
+    text-align: center;
+}
+body.dark-mode {
+    background-color:#5d5c5c;
+    color: #b88e2f;
+}
+/*  هذه الخصائص لمكان الايقونة واعطائها حجم ولون لشمس */
+#dark-mode-toggle {
+    float: left;
+    top: 35px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #b88e2f;
+}
+/* هذه الخاصية تطبيق عندما تكون الصفحة في الوضع الليلي يتم اعطاء القمر لون ابيض */
+body.dark-mode #dark-mode-toggle {
+    color: rgb(0, 0, 0);
+}
+
+header{
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5% ;
+    background: #fff;
+    position: fixed; 
+    width: 90%;
+    top: 0;/* */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.logo{
+font-size: 24px;
+font-weight: bold;
+}
+nav a{
+margin: 0 15px;
+text-decoration: none; 
+color: black;
+font-size: 16px;
+}
+.icon a{ 
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+}
+.icon a:active{
+    color: rgb(184, 142, 47);
+}
+.icon a:hover{
+    color: rgb(184, 142, 47);
+}
+.catalog-header{
+    margin-top: 80px;
+    padding: 40px 10%;
+    background-color :rgb(218, 198, 179);
+}
+.catalog-header h1{
+    font-size: 36px;
+}
+.catalog-header p{
+    font-size: 18px;
+    color: rgb(102, 102, 102);
+}
+
+.checkout-form{
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 80%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+h2{
+    font-size: 28px;
+    background-color: #b88e2f;
+    color: #333;
+   
+}
+.h3delivery{
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.input-group input {
+   flex:1;
+  padding: 10px;
+  border: 3px solid ;
+  border-radius: 5px;
+}
+
+label {
+
+  display: block;
+  margin-bottom: 5px;
+}
+
+.payment {
+  width: 100%;
+  padding: 12px;
+  background-color: #2d582d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+a{
+    font-size: 14px;
+   color: rgb(85, 85, 85);
+}
+footer{
+    
+    background: #222;
+    color: white;
+    padding: 40px 10%;
+   
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    text-align: left;
+}
+.footer-section h3{
+    margin-left: 20px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.footer-section ul li{
+    margin: 8px;
+}
+.footer-section ul li a{
+    color:#bbb;
+}
+.footer-section ul li a:hover{
+    color: white;
+}
+.footer-bottom{
+    text-align: end;
+    margin-top: 60px;
+    padding-top: 50px;
+    font-size: 14px;
+    color: #bbb;
+}
+        @media screen and (max-width: 700px){
+            .footer-container{
+        
+           display: grid;
+           grid-template-columns: repeat(1,4fr);
+           padding: 20px 20px;
+           }
+           .footer-bottom{
+            text-align: center;
+            margin-right: 20px;
+           }
+           }
+           @media screen and (max-width: 600px){ 
+            header{
+             display: block;
+            }
+            .logo{
+             font-size: 18px;
+            }
+            
+           }
+           @media screen and (max-width: 500px){
+            .chechout-form{
+                margin-right:1%;
+                width: 4%;
+            }
+            .input-group{
+                display: block;
+                margin-bottom: 8%;
+            }
+            input{
+                margin-bottom: 5%;
+            }
+            .footer-container{
+                
+                display: grid;
+                grid-template-columns: repeat(1,4fr);
+                padding: 20px 20px;
+                }
+            }
+            @media screen and (max-width: 300px){
+                .chechout-form{
+                    margin-right:10px;
+                    width: 4%;
+                }}

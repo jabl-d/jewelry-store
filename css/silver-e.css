@@ -1,0 +1,216 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;/* */
+    background: #f5f0e1;
+    color: #333;
+    text-align: center;
+}
+body.dark-mode {
+    background-color:#5d5c5c;
+    color: #b88e2f;
+}
+/*  هذه الخصائص لمكان الايقونة واعطائها حجم ولون لشمس */
+#dark-mode-toggle {
+    float: left;
+    top: 35px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #b88e2f;
+}
+/* هذه الخاصية تطبيق عندما تكون الصفحة في الوضع الليلي يتم اعطاء القمر لون ابيض */
+body.dark-mode #dark-mode-toggle {
+    color: rgb(0, 0, 0);
+}
+header{
+    display: flex;  /*تخليهم متجاورات*/
+    justify-content: space-between; /*مسافات بينهم*/
+    align-items: center;
+    padding: 15px /*top تنزلهم من فوق*/ 5% /*right تقربهم من اليمين*/;
+    background: #fff;
+    position: fixed; /*يتحدد بالنسبه للمتصفح ززيعني نثتبه بالصفحة*/
+    width: 90%;
+    top: 0;/* */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.logo{
+font-size: 24px;
+font-weight: bold;
+}
+nav a /*الروابط اللي داخل ال nav*/{
+margin: 0 15px;
+text-decoration: none; /*حذف الخط اللي تحت الروابط*/
+color: black;
+font-size: 16px;
+}
+.icon a{ 
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+}
+.icon a:active{
+    color: rgb(184, 142, 47);
+}
+.icon a:hover{
+    color: rgb(184, 142, 47);
+}
+.catalog-header{
+    margin-top: 80px;
+    padding: 40px 10%;
+    background-color: rgb(237, 227, 217);
+}
+.catalog-header h1{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.catalog-header p{
+    font-size: 18px;
+    color: rgb(102, 102, 102);
+}
+.catalog-section{
+    display: flex;
+    gap: 20px;
+    padding: 40px 5%;
+}
+.pro{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  
+}
+.pro img{
+    width: 80%;
+    border-radius: 10px;
+}
+.pro h3{
+    margin-left: 10%;
+    color: black;
+    margin: 15px 0 10px;
+    font-size: 20px;
+    font-style:oblique ;
+}
+.pro p{
+    font-size: 14px;
+    color: rgb(68, 68, 68);
+}
+.pro pre{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-right: 9%;
+    font-size: 16px;
+    
+}
+.pro:hover pre{
+    display: block;
+}
+.pro pre{
+    display: none;
+
+}
+.pro .material-icons{
+    color: black;
+    cursor: pointer;
+}
+.pro select{
+    border-radius: 5px;
+    border-width: 0.5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.catalog-links{
+    margin-top: 25px;
+    background-color: #f8f8f8;
+}
+.catalog-links a{
+    display: inline-block;/*اذا حذفناه بيصغر البوكس لفوق اكثر*/
+    margin: 0 15px;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+.catalog-links a:hover{
+    color: #b88e2f;
+}
+footer{
+    
+    background: #222;
+    color: white;
+    padding: 40px 10%;
+    text-align: center;
+}
+.footer-container{
+    display: grid;/*سوي مسافات بينهم*/
+    grid-template-columns: repeat(4,1fr);
+    /* الخاصيتين مكملات لبعض*/
+    gap: 20px;/* قرب بينهم شي خفيييييف يمكن الاستغناء عنه*/
+    text-align: left;/*خليهم لليسار شويه*/
+}
+.footer-section h3{
+    margin-left: 20px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul li{
+    margin: 8px;/* افقيه بين كل نقطة*/
+}
+.footer-section ul li a{
+    color:#bbb;
+}
+.footer-section ul li a:hover{
+    color: white;
+}
+.footer-bottom{
+    text-align: end;
+    margin-top: 60px;
+    padding-top: 50px;
+    font-size: 14px;
+    color: #bbb;
+    margin-left: 10px;
+}
+@media screen and (max-width: 600px){ 
+    header{
+     display: block;
+    }
+    .logo{
+     font-size: 18px;
+    }
+   }
+   @media screen and (max-width: 800px){ 
+    
+   .catalog-section{
+        display: block;
+    }
+    .pro{
+        margin-top: 10%;
+    }
+    .catalog-header h1{
+        font-size: 28px;
+    }
+    .catalog-header p{
+        font-size: 18px;
+    }
+   }
+   @media screen and (max-width: 500px){
+    .footer-container{
+    
+        display: grid;
+        grid-template-columns: repeat(1,4fr);
+        padding: 20px 20px;
+        }
+    }
+    @media screen and (max-width: 700px){
+        .footer-container{
+    
+       display: grid;
+       grid-template-columns: repeat(1,4fr);
+       padding: 20px 20px;
+       }
+       .footer-bottom{
+        text-align: center;
+        margin-right: 20px;
+       }
+       }

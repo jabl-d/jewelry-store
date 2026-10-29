@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Shopping</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <header>
+        <div class="logo">ANA JEWELLERY</div>
+        <nav>
+            <a href="aboutus.html">About us</a>
+            <a href="locationpage.html">Location</a>
+            <a href="contactpage.html">Contact us</a>
+        </nav>
+        <div class="icon">
+            <a href="payment.html"><i class="material-icons">payment</i></a>
+            <a href="cart.html" target="_blank"><i class="material-icons">add_shopping_cart</i></a>
+            <a href="loginpage.html" target="_blank"><i class="material-icons">person</i></a>
+            <a href="mainpage.html"><i class="material-icons">home</i></a>
+            <button id="dark-mode-toggle">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="catalog-header">
+        <h1>Shopping Cart</h1>
+    </section>
+    
+    <section class="cart-container">
+        <table class="cart-table">
+           <thead>
+            <tr>
+               <th>Product</th>
+               <th>Price</th>
+               <th>Quantity</th>
+               <th class="subtotal">Subtotal</th>
+            </tr>
+           </thead>
+          <tbody>
+            <tr>
+                <td class="product">
+                  <img src="images/ring5.jpg" >
+                      <div>
+                       <p>ANA Halo</p>
+                          <small>
+                            Silver
+                          </small>
+                      </div>
+                </td>
+                <td> 
+                    10.653$
+                </td>
+
+                <td>
+                <input type="number" value="1" min="1">
+              </td>
+            <td>
+                10.653$
+            </td>
+            </tr>
+
+            <tr>
+                <td class="product">
+                  <img src="images/brac3.jpg" >
+                      <div>
+                       <p>ANA Infinity</p>
+                          <small>
+                            Gold
+                          </small>
+                      </div>
+                </td>
+                <td> 
+                    10.089$
+                </td>
+
+                <td>
+                <input type="number" value="1" min="1">
+              </td>
+            <td>
+                $10.089
+            </td>
+            </tr>
+
+            <tr>
+                <td class="product">
+                  <img src="images/ear12.jpg" >
+                      <div>
+                       <p>ANA Whisper</p>
+                          <small>
+                           Silver
+                          </small>
+                      </div>
+                </td>
+                <td> 
+                    11.251$
+                </td>
+
+                <td>
+                <input type="number" value="1" min="1">
+              </td>
+            <td>
+                11.251$
+            </td>
+            </tr> 
+
+          </tbody>
+        </table>
+         <aside class="order-summary">
+            <h2>Order-Summary</h2>
+            <div class="summary-item"><span>Items</span><span>3</span></div>
+            <div class="summary-item"><span>Sub Total</span><span>32.896$</span> </div>
+            <div class="summary-item"><span>Shipping</span><span>00.00$</span> </div>
+            <div class="summary-item"><span>Taxes</span><span>00.00$</span> </div>
+            <div class="summary-item discount"><span>Coupon Discount</span><span>100.00$</span> </div>
+            <div class="summary-item"><span>Total</span><span>31.806$</span> </div>
+           <div><a href="payment.html"><p class="summary-item-btn">Proceed to Checkout </p></a></div>
+         </aside>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Main Links</h3>
+                <ul>
+                    <li><a href="mainpage.html">Home</a></li>
+                    <li><a href="loginpage.html">Account</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Communication</h3>
+                <ul>
+                    <li><i class="material-icons">call</i></li>
+                    <span>+967 775 577 328</span><br>
+                    <li><i class="material-icons">mail_outline</i></li>
+                    <span>Anajwe@gmail.com</span><br>
+                    <li><i class="material-icons">facebook</i></li>
+                    <span>Ana_jewerly</span><br>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="locationpage.html">Location</a></li>
+                    <li><a href="contactpage.html">Contact us</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-bottom">
+                <p>2025 ANA Jewelry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/style.js"></script>
+        </body>
+</html>

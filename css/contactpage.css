@@ -1,0 +1,241 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;/* */
+    background: #f5f0e1;
+    color: #333;
+    text-align: center;
+}
+body.dark-mode {
+    background-color:#5d5c5c;
+    color: #b88e2f;
+}
+/*  هذه الخصائص لمكان الايقونة واعطائها حجم ولون لشمس */
+#dark-mode-toggle {
+    float: left;
+    top: 35px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #b88e2f;
+}
+/* هذه الخاصية تطبيق عندما تكون الصفحة في الوضع الليلي يتم اعطاء القمر لون ابيض */
+body.dark-mode #dark-mode-toggle {
+    color: rgb(0, 0, 0);
+}
+
+header{
+    display: flex;  
+    justify-content: space-between; 
+    padding: 15px  5% ;
+    background: #fff;
+    position: fixed; 
+    width: 90%;
+    top: 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.logo{
+font-size: 24px;
+font-weight: bold;
+}
+nav a {
+margin: 0 15px;
+text-decoration: none; 
+color: black;
+font-size: 16px;
+}
+.icon a{ 
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+}
+.icon a:active{
+    color: rgb(184, 142, 47);
+}
+.icon a:hover{
+    color: rgb(184, 142, 47);
+}
+.catalog-header{
+    margin-top: 80px;
+    padding: 40px 10%;
+    background-color: rgb(237, 227, 217);
+}
+.catalog-header h1{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.catalog-header p{
+    font-size: 18px;
+    color: rgb(102, 102, 102);
+}
+
+.contact-section{
+    margin-top: 5%;
+    
+    padding: 50px;
+    padding-right: 5px;
+}
+
+.contact-container{
+    width: 80%;
+    margin: auto;/*وسطه*/
+}
+.contact-container h2{
+    font-size: 28px;
+    color:#444;
+    margin-bottom: 10px;
+}
+.contact-container h2 span{
+    color: rgb(184, 142, 47);
+}
+.contact-container p{
+    font-weight: bold;
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 30px;
+}
+.contact-content{
+    display: flex;
+    gap: 30px;
+}
+.contact-info{
+    width: 40%;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
+}
+.info-box{
+
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgb(249, 247, 246);
+    border-radius: 5px;
+    word-spacing: 5px;
+
+}
+.info-box p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    color:rgb(70, 69, 69);
+}
+.contact-form{
+    width: 55%;
+    background: rgb(119, 119, 119);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.form-group{
+    display: flex;
+    gap: 10px;
+}
+input, textarea{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 95%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    font-size: 16px;
+    
+}
+
+.btn{
+    margin-bottom: 15px;
+    background-color: #b88e2f;
+    color: white;
+    border: none;
+    width: 95%;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: #a07823;
+}
+footer{
+    
+    background: #222;
+    color: white;
+    padding: 40px 10%;
+    text-align: center;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    text-align: left;
+}
+.footer-section h3{
+    margin-left: 20px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.footer-section ul li{
+    margin: 8px;}
+.footer-section ul li a{
+    color:#bbb;
+}
+.footer-section ul li a:hover{
+    color: white;
+}
+.footer-bottom{
+    text-align: end;
+    margin-top: 60px;
+    padding-top: 50px;
+    font-size: 14px;
+    color: #bbb;
+    margin-left: 10px;
+}
+@media screen and (max-width: 600px){ 
+    header{
+     display: block;
+    }
+    .logo{
+     font-size: 18px;
+    }
+   }
+   @media screen and (max-width: 700px){
+    .contact-content{
+        flex-direction: column;
+        margin-right: 13%;
+    }
+    .contact-info{
+       width: 85%;
+      
+    }
+   .contact-form{
+    width: 80%;
+   }
+   .contact-container{
+    margin-top: 10%;
+   }
+   }
+   @media screen and (max-width: 500px){
+   .footer-container{
+   
+       display: grid;
+       grid-template-columns: repeat(1,4fr);
+       padding: 20px 20px;
+       }
+   }
+   @media screen and (max-width: 700px){
+       .footer-container{
+   
+      display: grid;
+      grid-template-columns: repeat(1,4fr);
+      padding: 20px 20px;
+      }
+      .footer-bottom{
+       text-align: center;
+       margin-right: 20px;
+      }
+      }
+     
+     

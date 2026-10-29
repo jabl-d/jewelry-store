@@ -1,0 +1,235 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;/* */
+    background: #f5f0e1;
+    color: #333;
+    text-align: center;
+}
+body.dark-mode {
+    background-color: #5d5c5c;
+    color: rgb(184, 142, 47);
+}
+/*  هذه الخصائص لمكان الايقونة واعطائها حجم ولون لشمس */
+#dark-mode-toggle {
+    float: left;
+    top: 35px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #b88e2f;
+}
+/* هذه الخاصية تطبيق عندما تكون الصفحة في الوضع الليلي يتم اعطاء القمر لون ابيض */
+body.dark-mode #dark-mode-toggle {
+    color: rgb(0, 0, 0);
+}
+header{
+    display: flex;  
+    justify-content: space-between; 
+    padding: 15px  5% ;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    position: fixed;
+    width: 90%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    top: 0;
+}
+.logo{
+font-size: 24px;
+font-weight: bold;
+}
+nav a {
+margin-right: 15px;
+text-decoration: none; 
+color: black;
+
+}
+.icon a{ 
+    cursor: pointer;
+    color: black;
+}
+.icon a:hover{
+    color: rgb(184, 142, 47);
+}
+
+.main{
+    background-image: url('../images/6.jpg');
+    color: rgb(0, 0, 0);
+    padding: 70px 20px;
+    
+}
+.main-text h1{
+    font-size: 48px;
+    margin-bottom: 20px;
+    
+}
+.main-text p{
+
+    font-size: 18px;
+}
+.login{
+   background-color: black; 
+   color: white;
+   padding: 10px  20px;
+}
+.collection{
+    padding: 50px 5%;
+}
+.collection h2{
+    font-size: 28px;
+}
+.collection-container{
+    display: flex;
+    gap: 20px ;
+    cursor: pointer;
+    
+}
+.collection-item{
+    background:  rgb(231, 205, 144);
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.collection-item img{
+border-radius: 5px;
+cursor: pointer;
+}
+.collection-item a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.about{
+    
+    background: #333;
+    color: white;
+    padding: 40px 5%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.about-text{
+    width: 50%;
+    margin-left: 8%;
+}
+.about-text a{
+
+    background-color:white; 
+    color: rgb(0, 0, 0);
+    padding: 10px  15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.about-text a:hover{
+    opacity: 0.6;
+}
+.about-img img{
+    margin-left: 20%;
+    border-radius: 20px;
+    
+}
+.p-about{
+    margin-bottom: 5%;
+    opacity: 0.6;
+}
+footer{
+    
+    background: #222;
+    color: white;
+    padding: 40px 10%;
+   
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    text-align: left;
+}
+.footer-section h3{
+    margin-left: 20px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.footer-section ul li{
+    margin: 8px;
+}
+.footer-section ul li a{
+    color:#bbb;
+}
+.footer-section ul li a:hover{
+    color: white;
+}
+.footer-bottom{
+    text-align: end;
+    margin-top: 60px;
+    padding-top: 50px;
+    font-size: 14px;
+    color: #bbb;
+}
+@media screen and (max-width: 650px){ 
+
+   header{
+    display: block;
+   }
+   .logo{
+    font-size: 18px;
+   }
+  }
+  @media screen and (max-width: 700px){ 
+   .main{
+    padding: 40px 10px;
+    background-size:cover ;
+    text-align: center;
+   }
+    .main-text h1{
+        margin-top: 50px;
+        font-size: 30px;
+    }
+    .main-text p{
+        font-size: 12px;
+    }
+    .login{
+        padding: 5px 1px;
+    }
+    .collection-container{
+        display: block;
+       
+    }
+    .collection-item{
+        width: 90%;
+        margin-top: 10%;
+    }
+    .about-text a{
+        font-size: 14px;
+    }
+    .about-img img{
+        width: 80%;
+    }
+   
+   }
+    @media screen and (max-width: 500px) {
+    .about-text a{
+   background-color:  rgb(231, 205, 144); 
+padding: 5px 5px;
+}}
+@media screen and (max-width: 500px){
+    .footer-container{
+    
+        display: grid;
+        grid-template-columns: repeat(1,4fr);
+        padding: 20px 20px;
+        }
+    }
+    @media screen and (max-width: 700px){
+        .footer-container{
+    
+       display: grid;
+       grid-template-columns: repeat(1,4fr);
+       padding: 20px 20px;
+       }
+       .footer-bottom{
+        text-align: center;
+        margin-right: 20px;
+       }
+       }
+

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/payment.css">
+</head>
+<body>
+    <header>
+        <div class="logo">ANA JEWELLERY</div>
+        <nav>
+            <a href="aboutus.html">About us</a>
+            <a href="locationpage.html">Location</a>
+            <a href="contactpage.html">Contact us</a>
+        </nav>
+        <div class="icon">
+            <a href="payment.html" target="_blank"><i class="material-icons">payment</i></a>
+            <a href="cart.html" target="_blank"><i class="material-icons">add_shopping_cart</i></a>
+            <a href="loginpage.html" target="_blank"><i class="material-icons">person</i></a>
+            <a href="mainpage.html"><i class="material-icons">home</i></a>
+            <button id="dark-mode-toggle">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="catalog-header">
+        <h1>Checkout</h1>
+    </section>
+
+    <section class="checkout-container">
+        <div class="checkout-form">
+        
+        <h2>Complete Payment</h2>
+        
+        <form action="mainpage.html" method="post" onsubmit="return validatePymentForm(event)">
+        <h3>Contact Information</h3>
+        
+        <div class="input-group">
+        <input type="text" placeholder="  First Name" id="name" required>
+        <input type="text" placeholder=" Last Name " id="name" required>
+        </div>
+        
+        <div class="input-group">
+        <input type="email" placeholder="  Email" id="email" required>
+        <input type="tel" placeholder=" Phone Number "  max="9" id="tel" required>
+        </div>
+        
+        
+        <h3> Shipping Information  </h3>
+        <div class="input-group">
+        <input type="text" placeholder=" Country" id="name" required>
+        <input type="text" placeholder=" City " id="name" required>
+        </div>
+        
+        <div class="input-group">
+        <input type="text" placeholder=" Address" id="adress" required>
+        <input type="text" placeholder="  ZIP Code" id="zipcod" required>
+        </div>
+        
+        <h3 class="h3delivery"> Delivery </h3>
+        <label><input type="radio" name="shipping" id="radio" checked> Free (4-5 Days)</label>
+        <label><input type="radio" name="shipping" id="radio"> Fast Shipping (1-2 Day)</label>
+        
+        <h3> Payment </h3>
+        <label><input type="radio" name="payment" id="radio" checked> Credit Card</label>
+        <div class="input-group">
+        <input type="text" placeholder="Card Number" id="cardnumber" required>
+        <input type="text" placeholder=" Expiration Date  (MM/YY)" id="mmyy" required>
+        </div>
+        
+        <div class="input-group">
+        <input type="text" placeholder= "Name Card Holder" id="namecard" required>
+        <input type="text" placeholder=" CVV" id="cvv" required>
+        </div>
+        
+        <label><input type="radio" name="payment" id="payment"> Google Pay</label>
+        <label><input type="radio" name="payment" id="payment"> Apple Pay</label>
+        <button type="submit" class="payment" > Complete Payment </button>
+        </form>
+        <br><br>
+        <a href="mainpage.html">Back to home page</a>
+    </div>
+</section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Main Links</h3>
+                <ul>
+                    <li><a href="mainpage.html">Home</a></li>
+                    <li><a href="loginpage.html">Account</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Communication</h3>
+                <ul>
+                    <li><i class="material-icons">call</i></li>
+                    <span>+967 775 577 328</span><br>
+                    <li><i class="material-icons">mail_outline</i></li>
+                    <span>Anajwe@gmail.com</span><br>
+                    <li><i class="material-icons">facebook</i></li>
+                    <span>Ana_jewerly</span><br>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="locationpage.html">Location</a></li>
+                    <li><a href="contactpage.html">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-bottom">
+                <p>2025 ANA Jewelry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+         function validatePaymentForm(event) {
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let tel = document.getElementById("tel").value.trim();
+        let radio = document.getElementById("radio").value.trim();
+        let adress = document.getElementById("adress").value.trim();
+        let zipcod = document.getElementById("zipcod").value.trim();
+        let codnumber = document.getElementById("codnumber").value.trim();
+        let mmyy = document.getElementById("mmyy").value.trim();
+         let namecard = document.getElementById("namecard").value.trim();
+         let cvv = document.getElementById("cvv").value.trim();
+         let payment = document.getElementById("payment").value.trim();
+        console.log(name, email,tel,radio,adress,zipcod,codnumber,mmyy,namecard,cvv,payment);
+        
+        if (name === "" || email === "" || tel === "" || radio === "" || adress === "" || zipcod === "" || codnumber === "" || mmyy === "" || namecard === "" || cvv === "" || payment === "") {
+            alert(" الرجاء إدخال جميع عمليات الدفع المطلوبة! ");
+            return false; // Prevent form submission
+        } 
+        else {
+            alert(" تمت عملية الدفع بنجاح! شكرا لتسوقك مع ANA Jewellry ");
+            return true; // Allow form submission
+        }
+    }
+    </script>
+
+    <script src="../js/style.js"></script>
+</body>
+</html>
